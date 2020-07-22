@@ -5,7 +5,7 @@
 ================================================== -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="360_union_verify" content="439d21c889517b8c051bc4c18d6e472d">
-<title>@yield('title', '知识库') }}</title>
+<title>@yield('title', '知识库')</title>
 
 <!-- CSRF Token -->
 <meta name="csrf-token" content="{{ csrf_token() }}">
