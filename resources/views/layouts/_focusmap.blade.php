@@ -1,6 +1,6 @@
 <div class="h_con1">
     <div class="h_con1_title">
-        <h2>败走共享经济，孙正义遭遇滑铁卢</h2>
+        <h2>败走共享经济，孙正义遭遇滑铁卢{{$focusmap}}</h2>
         <div class="h_con1_img">
             <img src="images/1.jpg" alt="">
             <div class="h_con1_data">
