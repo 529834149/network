@@ -1,0 +1,60 @@
+.h_body{width: 1024px;margin: 0 auto}
+.h_con1{overflow: hidden}
+.h_con1_title{margin: 25px 0}
+.h_con1_title h2{font-size: 46px;color: #054801;margin-bottom: 20px;text-align: center}
+.h_con1_img{position: relative;border-bottom: 4px solid #b30707}
+.h_con1_data{position: absolute;bottom: 0;right: 0;background: #b30707;color: #fff;padding: 6px 20px;}
+.h_con1_data:before{position: absolute;left: -26px;bottom: 0px;width: 0; height: 0;content: ""; border-bottom: 36px solid #b30707;border-left: 26px solid transparent;}
+.h_con1_data span{position: relative;margin-right:15px;font-family: Arial, "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif}
+.h_con1_data span:nth-of-type(1):after{position: absolute;top: 0;right: -8px;width: 1px;height: 1em;background: #fff;content: "";}
+.h_con1_xg{position:relative;float: left;padding: 20px 40px 20px 39px;background: url("../images/h_newbg.png")  #f7f7f7 no-repeat 0 0;    box-shadow: 0 1px 15px rgba(0,0,0,0.15); margin-bottom: 20px; border-radius: 0 0 4px 4px;}
+.h_xg{width: 290px;float: left;margin-left: 25px;}
+.h_xg h3{font-size: 20px;color: #054801;height: 1.5em;overflow: hidden;}
+.h_xg p{font-size: 16px;color: #555; line-height: 1.5em;margin: 5px 0 10px;}
+.h_xg_ins{font-size: 14px;color: #000;}
+.h_xg_ins span{margin:0 10px 0 5px;color: #a70000;font-family: "helvetica";font-weight: bold}
+
+.h_title{ margin-bottom: 20px;font-size: 30px;color: #A42421;border-bottom: 2px solid #A42421;text-indent: 6px;}
+.h_title1{ font-size: 22px;margin-top: 10px;}
+.h_left{width: 694px;float: left;margin-right: 50px;}
+.h_right{width: 280px;}
+
+.h_topList {margin-bottom: 20px;}
+.h_topList li{ border-bottom: 1px dashed #ddd;padding-bottom: 10px;margin-bottom: 20px;float: left}
+.h_topList h2{font-size: 20px;color: #054801;margin-bottom: 15px;line-height: 1.6em;max-height: 3.2em;overflow: hidden}
+.h_topList_con{display: flex;justify-content: space-between;align-items: end;display: table\9}
+.h_topList_left{font-size: 15px;color: #444;flex: 1;float: left;line-height: 1.6em;display: table-cell\9}
+.h_topList_left p{max-height: 6.4em;min-width:541px;overflow: hidden}
+.h_topList_img{width: 133px;height: 100px;border-radius: 6px;overflow: hidden;margin-left: 20px;display: table-cell\9}
+.h_topList_data{position:relative;margin-top:10px;font-size: 14px;color: #777!important;padding-left: 15px;}
+.h_topList_data:before{position: absolute;left:0px;top:6px;width: 8px;height: 8px;content: "";background: #054801}
+.h_topList_data .h_xg_ins{color: #777;float: left;margin-left: 20px;}
+
+.h_r{margin-bottom: 20px;}
+.h_hd_img img{width:280px;border-radius: 6px;overflow:hidden;margin-bottom: 15px;}
+.h_ad img{width:280px;border-radius: 6px;overflow:hidden;margin-bottom: 15px;}
+.h_hd h3{font-size: 16px;color: #054801;line-height: 1.6em;font-weight: normal}
+.h_hd p{line-height:1.8em;font-size: 14px;color: #777;margin-top: 5px;    height: 7.2em;overflow: hidden}
+.h_hd_top{margin-bottom: 20px;}
+.h_hd ul li{font-size: 14px;line-height: 2em;  list-style: square;margin-left: 20px;}
+
+.h_technology ul{border-bottom: 1px dashed #ddd;margin-bottom: 15px;}
+.h_technology ul li{position: relative;margin-bottom:15px;padding-left: 16px;font-size: 14px;color: #777;line-height: 1em;height: 1em;overflow: hidden}
+.h_technology ul li:before{position:absolute;left:0;top:4px;width: 8px;height: 8px;content: "";background: #054801;}
+.h_technology ul li a{display: flex;justify-content: space-between}
+.h_technology ul li a span{flex: 1}
+.h_technology ul li a strong{max-width: 4em;color: #888}
+
+.h_ohi li,.h_zl li{float: left;width: 60px;margin:0 13px 10px 0;text-align: center;font-size: 12px;}
+.h_ohi li:nth-of-type(4n),.h_zl li:nth-of-type(4n){margin-right: 0}
+.h_ohi li .h_avatar,.h_zl li .h_avatar{margin-bottom:10px;width: 60px;height: 60px;border-radius: 50%;overflow: hidden}
+.h_ohi li span,.h_zl li span{display: block;line-height: 1.2em;height: 2.4em;overflow: hidden; }
+
+
+.footer{ float: left;width:100%; margin:0 auto; padding:10px 0 30px;background:#282828;font-size:12px;text-align:center;color:#fff;  }
+.footer p{  margin:0 0 10px 0;line-height:35px;font-size:14px;}
+.footer p a{display: inline-block; margin: 0 1px; text-decoration:none;color:#fff; }
+.footer p a:hover{color:#a70000;}
+.footer .img{ width:280px; margin:10px auto; overflow:hidden}
+.footer .img a{margin: 0 10px;text-decoration: none;color: white;display: block; float:left;width: 120px;height: 50px;}
+.footer img{ float:left; margin-left:10px; width:100%;}
