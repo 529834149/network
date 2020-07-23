@@ -9,11 +9,11 @@
         <meta name="keywords" content="blog,weblog,blogger,bokee.com,www.bokee.com,博客中国,中国博客,博客,我的博客,自媒体,社会网络, IT,方兴东,科技,新知,生活, IT业界,互联网实验室,新媒体,博客研究,博客营销">
         <meta name="description" content="博客中国于2002年8月由博客教父方兴东创立。作为中国博客发源地，博客中国汇聚国内众多具新锐思想的意见领袖，是中国最具影响力的博客平台。“每天5分钟，给思想加油”是我们的宗旨，“博客改变中国”是我们的使命！">
         <meta name="author" content="www.blogchina.com,博客中国">
-        <title>登录 - 博客中国</title>
+        <title> {{getenv('APP_NAME')}}</title>
         <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/css/bootstrap-tagsinput.css">
-        <link rel="stylesheet" href="/public/assets/default/share/css/share.min.css">
+        <link rel="stylesheet" href="/css/share/css/share.min.css">
         <style type="text/css">
             .social-share .social-share-icon{
                 width: 40px !important;
@@ -92,8 +92,7 @@
                                                 <input type="text" name="cpt" id="logincptimg" placeholder="验证码" value="" class="form-control" style="width:133px;height:40px;border-radius: 4px 0 0 4px">
                                                 <img src="javascript:;" style="border-radius: 0 4px 4px 0" onclick="this.src='http://post.blogchina.com/captcha/create?r='+Math.random();" style="cursor:pointer;"></div>
                                             <div class="control-group text-left">
-                                                <!--<a href="http://post.blogchina.com/apply">专栏申请</a>-->
-                                                <!-- <input type="checkbox" class="icheck" name="sign_in[remember_me]" id="sign_in_remember_me" value="true" checked="checked" style="position: relative; opacity: 0;"> 记住我-->
+                                               
                                                 <a class="pull-right forgetpassw" href="/user/password/forget">忘记密码?</a></div>
                                             <button class="ladda-button submit-button btn " data-color="blue" id="login_btn">
                                                 <span class="ladda-label">登 录</span></button>
@@ -137,7 +136,6 @@
                                                 <img src="javascript:;" style="border-radius: 0 4px 4px 0" onclick="this.src='http://post.blogchina.com/captcha/create?r='+Math.random();"></div>
                                             <button class="ladda-button submit-button btn" data-color="blue" id="logon_btn">
                                                 <span class="ladda-label">下一步</span></button>
-                                            <!--logon_phone-->
                                             <div id="logon_phone" class="modal bs-example-modal-sm fade logon_phone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
                                                 <div class="modal-dialog modal-sm">
                                                     <div class="modal-content">
@@ -158,9 +156,9 @@
                                                             <span class="ladda-label">注 册</span></button>
                                                     </div>
                                                 </div>
-                                                <!-- /.modal-content --></div>
-                                            <!-- /.modal-dialog --></div>
-                                        <!--logon_mail-->
+                                              </div>
+                                        </div>
+                            
                                         <div id="logon_mail" class="modal fade logon_phone logon_mail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                             <div class="modal-dialog modal-sm">
                                                 <div class="modal-content">
@@ -193,6 +191,7 @@
     <div class="footer footmain p_footer">© Copyright 2001 - 2020 blogchina.com</div>
 </body>
 <script src="/js/icheck.min.js"></script>
+<script src="/js/login.js"></script>
 <script>
     $('a[data-toggle="tab"]').click(function(e) {
         e.preventDefault();
