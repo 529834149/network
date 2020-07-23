@@ -11,6 +11,28 @@
 
 php artisan make:controller xxxxController --resource
 
+## 辅助函数
+	1、touch app/helpers.php
+	2、composer.json
+		{
+		    ...
+
+		    "autoload": {
+		        "psr-4": {
+		            "App\\": "app/"
+		        },
+		        "classmap": [
+		            "database/seeds",
+		            "database/factories"
+		        ],
+		        "files": [
+		            "app/helpers.php"
+		        ]
+		    }
+		    ...
+		}
+	3、composer dump-autoload
+
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
 - Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
