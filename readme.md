@@ -7,9 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## 创建快捷键
 
-php artisan make:controller xxxxController --resource
+php artisan make:controller xxxxController --resource [创建资源控制器]
+
+php artisan make:model Models/Category[创建model]
 
 ## 辅助函数
 	1、touch app/helpers.php
