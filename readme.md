@@ -9,9 +9,9 @@
 
 ## 创建快捷键
 
-php artisan make:controller xxxxController --resource [创建资源控制器]
+- php artisan make:controller xxxxController --resource [创建资源控制器]
 
-php artisan make:model Models/Category[创建model]
+- php artisan make:model Models/Category[创建model]
 
 ## 辅助函数
 	1、touch app/helpers.php
@@ -34,6 +34,25 @@ php artisan make:model Models/Category[创建model]
 		    ...
 		}
 	3、composer dump-autoload
+## 用户认证脚手架
+- php artisan make:auth[创建用户认证脚手架]
+
+- 路由等同于
+
+--	// Authentication Routes...
+--	Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+--	Route::post('login', 'Auth\LoginController@login');
+--	Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+--	// Registration Routes...
+--	Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+--	Route::post('register', 'Auth\RegisterController@register');
+
+--	// Password Reset Routes...
+--	Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
+--	Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+--	Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
+--	Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 - [Simple, fast routing engine](https://laravel.com/docs/routing).
 - [Powerful dependency injection container](https://laravel.com/docs/container).
