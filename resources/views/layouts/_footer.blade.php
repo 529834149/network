@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer footmain">
 	<p>
 		<a target="_blank" href="http://tuijian.blogchina.com/footr/wzdw">网站定位</a> | 
 		<a target="_blank" href="http://tuijian.blogchina.com/footr/lsyl">历史由来</a> | 

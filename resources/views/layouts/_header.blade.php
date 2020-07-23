@@ -5,31 +5,35 @@
         </div>
         <div class="cnt"><img src="/headerStyle/title.gif"></div>
         <div class="user_login_all">
-            <div id="userislocallogin"><div class="user_login_no"><a class="txt userindexlogin" href="http://post.blogchina.com/sign/in?from=http://blogchina.com/">登录 / 注册</a></div></div>
+            <div id="userislocallogin">
+                <div class="user_login_no">
+                    <a class="txt userindexlogin" href="/sign">登录 / 注册</a>
+                </div>    
+            </div>
         </div>
     </div>
     <div class="content w_content">
         <ul class="nav">
             <li class="no_bg">
-                <a href="http://tuijian.blogchina.com/list/channellist/pindao/2" target="_blank">前沿科技</a>
+                <a href="http://tuijian.blogchina.com/list/channellist/pindao/2" target="_blank">推荐</a>
             </li>
             <li class="no_bg">
-                <a href="http://tuijian.blogchina.com/list/channellist/pindao/3" target="_blank">网络研究</a>
+                <a href="http://tuijian.blogchina.com/list/channellist/pindao/3" target="_blank">PHP</a>
             </li>
             <li class="no_bg">
-                <a href="http://chuban.blogchina.com/" target="_blank">出版中心</a>
+                <a href="http://chuban.blogchina.com/" target="_blank">Golang教程</a>
             </li>
             <li class="no_bg">
-                <a href="http://zt.blogchina.com/2017zt/hlwkss/" target="_blank">互联网口述历史</a>
+                <a href="http://zt.blogchina.com/2017zt/hlwkss/" target="_blank">Web前端</a>
             </li>
             <li class="no_bg">
-                <a href="http://tuijian.blogchina.com/list/channellist/pindao/7" target="_blank">数字论坛</a>
+                <a href="http://tuijian.blogchina.com/list/channellist/pindao/7" target="_blank">HTTP/TCP</a>
             </li>
             <li class="no_bg">
-                <a href="http://poem.blogchina.com/" target="_blank">诗歌频道</a>
+                <a href="http://poem.blogchina.com/" target="_blank">数据库</a>
             </li>
             <li class="no_bg">
-                <a href="http://tuijian.blogchina.com/list/dissertationcenter/flag/6" target="_blank">专题中心</a>
+                <a href="http://tuijian.blogchina.com/list/dissertationcenter/flag/6" target="_blank">架构</a>
             </li>
         </ul>
         <ul class="nav1">

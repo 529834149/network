@@ -14,4 +14,6 @@
 @section('rightcontent')
     <!-- 右边内容 -->
     @include('index._rightcontent', ['data' => '我是传值'])
+   
 @endsection
+

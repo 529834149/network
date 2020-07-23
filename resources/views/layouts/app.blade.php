@@ -13,10 +13,11 @@
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" type="text/css" href="/headerStyle/headerPc.css">
-<link rel="stylesheet" type="text/css" href="/css/index.css">
-<link rel="stylesheet" type="text/css" href="/css/reset.css">
-
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ asset('headerStyle/headerPc.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/index.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/reset.css') }}">
+<script src="{{ asset('public/assets/default/js/jquery.min.js') }}"></script>   
 <!-- Java Script
 ================================================== -->
 @yield('styles')
@@ -28,6 +29,7 @@
     <div class="h_content">
         <!-- 首页焦点图 -->
         @yield('focusmap')
+
         <div class="h_con2">
             <!-- 头条左侧区域-->
             @yield('leftcontent')
@@ -37,5 +39,6 @@
     </div>
 </div>
 @include('layouts._footer')
-
-</body></html>
+@yield('scripts')
+</body>
+</html>
