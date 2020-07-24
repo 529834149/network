@@ -39,6 +39,14 @@
 
 - 路由等同于
 
+
+##安装验证类
+composer require mews/captcha
+
+ php artisan vendor:publish --provider='Mews\Captcha\CaptchaServiceProvider' 
+
+
+
 - Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 - Route::post('login', 'Auth\LoginController@login');
 - Route::post('logout', 'Auth\LoginController@logout')->name('logout');

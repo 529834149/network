@@ -9,11 +9,12 @@
         <meta name="keywords" content="blog,weblog,blogger,bokee.com,www.bokee.com,博客中国,中国博客,博客,我的博客,自媒体,社会网络, IT,方兴东,科技,新知,生活, IT业界,互联网实验室,新媒体,博客研究,博客营销">
         <meta name="description" content="博客中国于2002年8月由博客教父方兴东创立。作为中国博客发源地，博客中国汇聚国内众多具新锐思想的意见领袖，是中国最具影响力的博客平台。“每天5分钟，给思想加油”是我们的宗旨，“博客改变中国”是我们的使命！">
         <meta name="author" content="www.blogchina.com,博客中国">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title> {{getenv('APP_NAME')}}</title>
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/css/bootstrap-tagsinput.css">
-        <link rel="stylesheet" href="/css/share/css/share.min.css">
+        <link rel="stylesheet" href="/css/bootstrap.min.css?{{time()}}">
+        <link rel="stylesheet" href="/css/font-awesome.min.css?{{time()}}" rel="stylesheet">
+        <link rel="stylesheet" href="/css/bootstrap-tagsinput.css?{{time()}}">
+        <link rel="stylesheet" href="/css/share/css/share.min.css?{{time()}}">
         <style type="text/css">
             .social-share .social-share-icon{
                 width: 40px !important;
@@ -28,15 +29,15 @@
                 line-height: 1rem;
             }
         </style>
-        <link rel="stylesheet" type="text/css" href="/css/adetails.css">
-        <link rel="stylesheet" type="text/css" href="/css/red.css">
+        <link rel="stylesheet" type="text/css" href="/css/adetails.css?{{time()}}">
+        <link rel="stylesheet" type="text/css" href="/css/red.css?{{time()}}">
         <script src="/js/jquery.min.js"></script>
         <!--[if lt IE 9]>
             <script src="http://post.blogchina.com/public/assets/default/js/jquery19.min.js"></script>
             <script src="http://post.blogchina.com/public/assets/default/js/html5shiv.min.js"></script>
             <script src="http://post.blogchina.com/public/assets/default/js/respond.min.js"></script>
         <![endif]-->
-        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap.min.js?{{time()}}"></script>
         <!--[if IE 8]>
             <link rel="stylesheet" type="text/css" href="http://post.blogchina.com/public/assets/default/css/ie8.css">
         <![endif]-->
@@ -74,89 +75,81 @@
                                         <li class="">
                                             <a href="#logup" data-toggle="tab">注册</a></li>
                                     </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane active freeMailbox" id="login">
-                                            <div class="input-group domestic">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-user"></i>
-                                                </span>
-                                                <input type="text" id="sign_in_name" value="" class="span2" placeholder="用户名/手机号/电子邮件" aria-describedby="basic-addon1" value=''></div>
-                                            <div class="input-group password">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-unlock-alt"></i>
-                                                </span>
-                                                <input type="password" id="sign_in_password" class="span2" placeholder="密码" aria-describedby="basic-addon1" value=''>
-                                                <i class="fa fa-eye"></i>
-                                            </div>
-                                            <div class="input-group loginyzmerror" style="display:none;">
-                                                <input type="text" name="cpt" id="logincptimg" placeholder="验证码" value="" class="form-control" style="width:133px;height:40px;border-radius: 4px 0 0 4px">
-                                                <img src="javascript:;" style="border-radius: 0 4px 4px 0" onclick="this.src='http://post.blogchina.com/captcha/create?r='+Math.random();" style="cursor:pointer;"></div>
-                                            <div class="control-group text-left">
-                                               
-                                                <a class="pull-right forgetpassw" href="/user/password/forget">忘记密码?</a></div>
-                                            <button class="ladda-button submit-button btn " data-color="blue" id="login_btn">
-                                                <span class="ladda-label">登 录</span></button>
-                                            <div class="login_ways">
-                                                <ul class="login_ways_ul unlist">
-                                                    <li class="weibo">
-                                                        <a href="javascript:;">
-                                                            <i class="fa fa-weibo"></i>
-                                                        </a>
-                                                    </li>
-                                                    <!-- <li class="qq">
-                                                    <a href="/auth/qq?state=n"><i class="fa fa-qq"></i></a></li>-->
-                                                    <li class="wechat">
-                                                        <a href="javascript:;">
-                                                            <i class="fa fa-wechat"></i>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane vipMailbox" id="logup">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-envelope-o"></i>
-                                                </span>
-                                                <input type="text" name="email" id="sign_up_email_mobile" value="" class="span2" autocomplete='off' placeholder="邮件地址/手机号码" aria-describedby="basic-addon1"></div>
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-user"></i>
-                                                </span>
-                                                <input type="text" name="nickname" id="nickname" value="" class="span2" autocomplete='off' placeholder="昵称" aria-describedby="basic-addon1"></div>
-                                            <div class="input-group password">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-unlock-alt"></i>
-                                                </span>
-                                                <input type="password" name="password" id="sign_up_password" class="span2" autocomplete='off' placeholder="密码（6~20个字符）" aria-describedby="basic-addon1">
-                                                <i class="fa fa-eye"></i>
-                                            </div>
-                                            <div class="input-group logupyzmerror" style="display: none;">
-                                                <input type="text" name="cpt" placeholder="验证码" value="" class="form-control logupyzm" style="width:133px;height:40px;border-radius: 4px 0 0 4px">
-                                                <img src="javascript:;" style="border-radius: 0 4px 4px 0" onclick="this.src='http://post.blogchina.com/captcha/create?r='+Math.random();"></div>
-                                            <button class="ladda-button submit-button btn" data-color="blue" id="logon_btn">
-                                                <span class="ladda-label">下一步</span></button>
-                                            <div id="logon_phone" class="modal bs-example-modal-sm fade logon_phone" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
-                                                <div class="modal-dialog modal-sm">
-                                                    <div class="modal-content">
-                                                        <button type="button" class="close" data-dismiss="modal">
-                                                            <span aria-hidden="true">×</span>
-                                                            <span class="sr-only">Close</span></button>
-                                                        <h4 class="text-center">验证手机</h4>
-                                                        <p class="text-center">验证码已成功下发</p>
-                                                        <div class="input-group domestic">
-                                                            <input type="text" value="" class="placee phonereg" placeholder="手机号码" style=" background-color: #eee;" readonly></div>
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control logon_yzm_input" placeholder="请填写验证码">
-                                                            <label class="error is-visible"></label>
-                                                            <span class="input-group-btn">
-                                                                <button class="btn btn-default logon_yzm_btn" type="button">发送验证码</button></span>
-                                                        </div>
-                                                        <button class="ladda-button submit-button btn phoneregister" data-color="blue">
-                                                            <span class="ladda-label">注 册</span></button>
+                                 
+                                        <div class="tab-content">
+                                           
+                                            <div class="tab-pane active freeMailbox" id="login">
+                                                <form action="sign/in" method="post">
+                                                    <div class="input-group domestic">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-user"></i>
+                                                        </span>
+                                                        <input type="text" id="sign_in_name" value="" class="span2" placeholder="用户名/手机号/电子邮件" aria-describedby="basic-addon1" value=''></div>
+                                                    <div class="input-group password">
+                                                        <span class="input-group-addon">
+                                                            <i class="fa fa-unlock-alt"></i>
+                                                        </span>
+                                                        <input type="password" id="sign_in_password" class="span2" placeholder="密码" aria-describedby="basic-addon1" value=''>
+                                                        <i class="fa fa-eye"></i>
                                                     </div>
+                                                    <div class="input-group loginyzmerror" style="display:none;">
+                                                        <input type="text" name="cpt" id="logincptimg" placeholder="验证码" value="" class="form-control" style="width:133px;height:40px;border-radius: 4px 0 0 4px">
+                                                        <img  style="border-radius: 0 4px 4px 0" src="{{ captcha_src('flat') }}" onclick="this.src='/captcha/flat?'+Math.random()" title="点击图片重新获取验证码"></div>
+                                                    <div class="control-group text-left">
+                                                       
+                                                        <a class="pull-right forgetpassw" href="/user/password/forget">忘记密码?</a></div>
+                                                    <button type="submit" class="ladda-button submit-button btn " data-color="blue" id="login_btn">
+                                                        <span class="ladda-label">登 录</span></button>
+                                                    <div class="login_ways">
+                                                        <ul class="login_ways_ul unlist">
+                                                            <li class="weibo">
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-weibo"></i>
+                                                                </a>
+                                                            </li>
+                                                            <!-- <li class="qq">
+                                                            <a href="/auth/qq?state=n"><i class="fa fa-qq"></i></a></li>-->
+                                                            <li class="wechat">
+                                                                <a href="javascript:;">
+                                                                    <i class="fa fa-wechat"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                           
+                                        <div class="tab-pane vipMailbox" id="logup">
+                                            <form action="sign/up" method="post">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-envelope-o"></i>
+                                                    </span>
+                                                    <input type="text" name="email" id="sign_up_email_mobile" value="" class="span2" autocomplete='off' placeholder="邮件地址/手机号码" aria-describedby="basic-addon1"></div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </span>
+                                                    <input type="text" name="nickname" id="nickname" value="" class="span2" autocomplete='off' placeholder="昵称" aria-describedby="basic-addon1"></div>
+                                                <div class="input-group password">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-unlock-alt"></i>
+                                                    </span>
+                                                    <input type="password" name="password" id="sign_up_password" class="span2" autocomplete='off' placeholder="密码（6~20个字符）" aria-describedby="basic-addon1">
+                                                    <i class="fa fa-eye"></i>
                                                 </div>
-                                              </div>
+                                                <div class="input-group logupyzmerror {{ $errors->has('captcha') ? ' has-error' : '' }}" >
+                                                    <input type="text" name="cpt" placeholder="验证码" value="" class="form-control logupyzm" style="width:133px;height:40px;border-radius: 4px 0 0 4px">
+                                                    <!-- <img src="javascript:;" style="border-radius: 0 4px 4px 0" onclick="this.src='http://post.blogchina.com/captcha/create?r='+Math.random();"> -->
+                                                    <img  style="border-radius: 0 4px 4px 0" src="{{ captcha_src('flat') }}" onclick="this.src='/captcha/flat?'+Math.random()" title="点击图片重新获取验证码">
+                                                </div>
+
+
+                                                <button class="ladda-button submit-button btn" data-color="blue" id="logon_btn">
+                                                    <span class="ladda-label">下一步</span>
+                                                </button>
+                                            </form>
+                                            
                                         </div>
                             
                                         <div id="logon_mail" class="modal fade logon_phone logon_mail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -190,8 +183,9 @@
     </div>
     <div class="footer footmain p_footer">© Copyright 2001 - 2020 blogchina.com</div>
 </body>
-<script src="/js/icheck.min.js"></script>
-<script src="/js/login.js"></script>
+<script src="/js/jquery.noty.packaged.min.js"></script>  
+<script src="/js/icheck.min.js?{{time()}}"></script>
+<script src="/js/login.js?{{time()}}"></script>
 <script>
     $('a[data-toggle="tab"]').click(function(e) {
         e.preventDefault();

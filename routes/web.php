@@ -14,9 +14,13 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::resource('/', 'IndexController');
+Route::get('/', 'IndexController@index');
+Route::get('sign', 'SignController@index'); 
+Route::get('register', 'SignController@register'); 
+// Route::post('register', 'SignController@register'); 
 
-Route::resource('sign', 'SignController'); 
+// Route::get('sign/registeremail', 'SignController@registeremail'); 
+// Route::get('sign/sentemail', 'SignController@sentemail'); 
 // Auth::routes();
 //等同于下面的// Authentication Routes...
 // Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
